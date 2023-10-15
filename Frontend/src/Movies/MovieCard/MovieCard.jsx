@@ -1,16 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+
 export const MovieCard = () => {
-  const Images = {
-    image1: new URL('https://images.app.goo.gl/UrSFFfA6SB2MHPW2A',  import.meta.url).href
-  }
 
   return (
             <div className="card bg-info">
                 <div className="row no-gutters">
                     <div className="col-4"> 
-                        <img  src={Images.image1}/>  
+                        <img className='img-fluid rounded float-start' src="https://posters.movieposterdb.com/22_10/2021/15239576/l_shark-movie-poster_02ff9a3d.jpg"/>
                     </div>
 
                     <div className="col-8">
