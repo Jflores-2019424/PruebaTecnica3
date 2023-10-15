@@ -12,7 +12,7 @@ export const Register = () => {
 }
 
   return (
-    <div className='container'>
+    <div className='container bg-secondary p-3 position-absolute top-50 start-50 translate-middle'>
       <div className="form-group">
           <label>Email</label>
           <input type="email" className="form-control form-control-sm" placeholder="Email"/>
