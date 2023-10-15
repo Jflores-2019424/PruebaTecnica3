@@ -13,17 +13,20 @@ export const Ticket = () => {
   return (
     <div className='container'>
       <h1>Pelicula</h1>
-      <select>
+      <select className='form-select'>
         <option value="">Escoja su Pelicula...</option>
       </select>
       <h1>Fecha</h1>
-      <input type="date"/>
+      <input  className='form-control' type="date"/>
       <br />
-      <button>
+      <button
+       className='btn btn-info'
+      >
         <i className="fa-solid fa-cart-shopping"></i>
       </button>
 
       <button
+      className='btn btn-primary m-3'
       onClick={onBack}
       >
         <i className="fa-solid fa-house"></i>
