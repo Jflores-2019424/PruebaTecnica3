@@ -14,6 +14,7 @@ const createMovie = async(req, res) =>{
         return res.status(200).json({message: `Movie ${title} addded correctly`})
     }catch(err){
         console.log(err);
+        return res.status(500).json({message: "error"})
     }
 }
 
@@ -33,15 +34,14 @@ const listMovie = async(req, res) =>{
 const addFunction = async(req, res) =>{
     try{
         const id = req.params.id;
-        const { functionId, dateTime } = req.body
+        const { date } = req.body
 
         const show = await Movie.findByIdAndUpdate(
             id,
             {
                 $push: {
                     functions: {
-                        functionId: functionId,
-                        dateTime: dateTime
+                        date: date
                     },
                 },
             },
