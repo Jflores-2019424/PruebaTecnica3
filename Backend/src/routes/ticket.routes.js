@@ -10,3 +10,5 @@ api.post("/create-ticket", createTicket)
 api.get("/list-ticket", listTicket)
 
 api.delete("/delete-ticket/:id", deleteTicket)
+
+module.exports = api;

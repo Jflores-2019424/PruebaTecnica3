@@ -6,7 +6,7 @@ const Schema = mongoose.Schema
 const TicketSchema = new Schema({
     movieId: {
         type: Schema.Types.ObjectId,
-        ref: Movie,
+        ref: 'Movie',
         required: true,
     },
     seat: {
@@ -15,7 +15,7 @@ const TicketSchema = new Schema({
     },
     functionId: {
         type: Schema.Types.ObjectId,
-        ref: Show,
+        ref: 'Movie',
         required: true
     }
 })

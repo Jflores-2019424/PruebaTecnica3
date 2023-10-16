@@ -17,10 +17,12 @@ const MoviesSchema = new Schema({
         type: String,
         required: true
     },
-    functions: {
-        type: Schema.Types.ObjectId,
-        ref: Show
-    }
+    functions: [{
+        date: {
+            type: Date,
+            required: true
+        }
+    }]
     
 })
 
