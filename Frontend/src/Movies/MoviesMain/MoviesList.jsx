@@ -7,7 +7,9 @@ export const MoviesList = () => {
       <h1>Listado</h1>
       <div className="row rows-cols-1 row-cols-md-3 g-3">
         <br />
-        <MovieCard/>
+        <ul style={{listStyleType: 'none'}}>
+            <li><MovieCard/></li>
+        </ul>
       </div>
     </div>
   )
