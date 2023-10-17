@@ -2,6 +2,7 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import { Login } from "./UI/Login/pages/Login";
 import { App } from "./App.jsx"
 import { Register } from "./UI/Register/pages/Register"
+import '../src/index.css'
 
 export const AppRouter = () =>{
   return(  

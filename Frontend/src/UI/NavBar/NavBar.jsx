@@ -11,6 +11,10 @@ export const Navbar = () => {
         });
     }
 
+    const deleteToken = () =>{
+        localStorage.clear();
+    }
+
     const onTicket = () => {
         navigate('/ticketList', {
             replace: true
@@ -30,6 +34,11 @@ export const Navbar = () => {
                         Menu
                     </NavLink>
                 </div>
+                <div className="navbar-nav">
+                    <NavLink className={ ({isActive}) => `nav-item nav-link  ${ isActive ? 'active':'' }` }to="/ticket">
+                        Boletos
+                    </NavLink>
+                </div>
             </div>
             <div className="navbar-nav">
             <NavLink onClick={onTicket} className={ ({isActive}) => `nav-item nav-link  ${ isActive ? 'active':'' }` }to="/ticketList">
@@ -37,7 +46,10 @@ export const Navbar = () => {
             </NavLink>
             </div>
 
-            <NavLink onClick={onLogout} className={ ({isActive}) => `nav-item nav-link  ${ isActive ? 'active':'' }` }to="/login">
+            <NavLink onClick={()=>{
+                            deleteToken(),
+                            onLogout()
+                        }} className={ ({isActive}) => `nav-item nav-link  ${ isActive ? 'active':'' }` }to="/login">
                         Cerrar Sesion
             </NavLink>
         </nav>

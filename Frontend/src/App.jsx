@@ -3,6 +3,7 @@ import { Navbar } from "./UI/NavBar/NavBar";
 import { MoviesList } from "./Movies/MoviesMain/MoviesList";
 import { Ticket } from "./Movies/Ticket/Ticket";
 import { TicketList } from "./Movies/TicketList/TicketList";
+import "./index.css"
 
 export const App = () =>{
   return(  

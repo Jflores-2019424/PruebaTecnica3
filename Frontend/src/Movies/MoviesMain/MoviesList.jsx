@@ -1,5 +1,6 @@
 import React from 'react'
 import { MovieCard } from '../MovieCard/MovieCard'
+import '../../index.css'
 
 export const MoviesList = () => {
   return (
@@ -7,10 +8,11 @@ export const MoviesList = () => {
       <h1>Listado</h1>
       <div className="movie-container">
         <br />
-        <ul className='list-group col-5' style={{listStyleType: 'none'}}>
-            <li className=''><MovieCard/></li>
+        <ul className='' style={{listStyleType: 'none'}}>
+            <li style={{display: "inline-block"}}><MovieCard/></li>
         </ul>
       </div>
+      <h1 className=''></h1>
     </div>
   )
 }

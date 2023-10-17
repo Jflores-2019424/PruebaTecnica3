@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { login } from '../helpers/ApiLogin'
 import Swal from 'sweetalert2';
+import "../../../index.css"
 
 export const Login = () => {
   const navigate = useNavigate();
@@ -34,6 +35,7 @@ const onRegister = () =>{
 }
 
   return (
+    <div className='form'>
     <form className='container bg-secondary p-3 position-absolute top-50 start-50 translate-middle'>
         <div className="form-group">
           <label>Email</label>
@@ -47,5 +49,6 @@ const onRegister = () =>{
         <button onClick={(e) => onLogin(e)} className="btn btn-primary m-2">Login</button>
         <button onClick={onRegister} className="btn btn-primary">Register</button>
     </form>
+    </div>
   )
 }
