@@ -5,10 +5,10 @@ export const MoviesList = () => {
   return (
     <div className='container'>
       <h1>Listado</h1>
-      <div className="row rows-cols-1 row-cols-md-3 g-3">
+      <div className="movie-container">
         <br />
-        <ul style={{listStyleType: 'none'}}>
-            <li><MovieCard/></li>
+        <ul className='list-group col-5' style={{listStyleType: 'none'}}>
+            <li className=''><MovieCard/></li>
         </ul>
       </div>
     </div>

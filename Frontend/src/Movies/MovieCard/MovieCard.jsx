@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { listMovies } from './ApiMovies'
 
-
 export const MovieCard = () => {
 
     const [movie, setMovie] = useState([])
@@ -18,29 +17,25 @@ export const MovieCard = () => {
                 {movie.map((movieActual, index) =>{
                 const id = movieActual._id || ''
                 return(
-                <div key={id} className="card bg-info">
-                    <div className="row no-gutters">
-                        <div className="col-4"> 
-                            <img className='img-fluid rounded float-start' src={movieActual.image}/>
-                        </div>
+                    <div key={id} className="card bg-secondary m-2">
+                        <div className="row">
+                            <div className="col-4"> 
+                                <img className='img-fluid rounded float-start' src={movieActual.image}/>
+                            </div>
 
-                        <div className="col-8">
-                            <div className="card-body">
+                            <div className="col-8">
+                                <div className="card-body">
 
-                                <h5 className="card-title">{movieActual.title}</h5>
-                                <p className="card-text">{movieActual.clasification}</p>                                                      
-                                
-                                <p className="card-text">
-                                    <small className="text-muted"></small>
-                                </p>                            
+                                    <h3 className="card-title">{movieActual.title}</h3>
+                                    <h5 className="card-text">{movieActual.clasification}</h5>                                                      
 
-                                <Link to={`/ticket`}>
-                                    Comprar
-                                </Link>
+                                    <Link style={{color: "black"}} to={`/ticket`}>
+                                        <h5>Comprar</h5>
+                                    </Link>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>);
+                    </div>);
                 })}
             </div>
   )
